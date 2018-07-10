@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+//class Address: BaseModel {
+//    var primaryStreet: String
+//    var secondaryStreet: String?
+//    var state: String
+//    var zipcode: String
+//    var country: String
+//    var backendResource: AddressBackendResource?
+//    
+//    init(primaryStreet: String, secondaryStreet: String = nil, )
+//}

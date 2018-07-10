@@ -27,7 +27,7 @@ struct BackendDataService {
         }
     }
     
-    func save<T: BackendPersistable>(_ obj: T?, completionHandler: ((T?) -> ())? = nil)  {
+    func save<T: BackendPersistable>(_ obj: T?, completionHandler: @escaping (T?) -> ())  {
         if obj == nil {
             return
         }
@@ -45,27 +45,28 @@ struct BackendDataService {
             decoder.dateDecodingStrategy = .customISO8601
             if let wrappedData = returnedData["data"] as? Dictionary<String, Any> {
                 let decodedObj = try? decoder.decode(T.self, from: try! JSONSerialization.data(withJSONObject: wrappedData))
-                completionHandler?(decodedObj)
+                completionHandler(decodedObj)
             }
         }
     }
     
-    func getWithID<T: BackendPersistable>(_ id: Int, type: T.Type, completionHandler: ((T?) -> ())? = nil)  {
+    func getWithID<T: BackendPersistable>(_ id: Int, type: T.Type, completionHandler: @escaping (T?) -> ())  {
         let relURLString = type.buildURLString(method: .GET, id: id, queryString: nil, ownedBy: nil)
         let request = BackendDataRequest.get(relURLString: relURLString!)
         BackendDataService.shared.send(request: request) {
             data, response, error in
+            print(String(data: data!, encoding: .utf8))
             let returnedData = try! JSONSerialization.jsonObject(with: data!) as! Dictionary<String,  Any>
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .customISO8601
             if let wrappedData = returnedData["data"] as? Dictionary<String, Any> {
                 let decodedObj = try? decoder.decode(T.self, from: try! JSONSerialization.data(withJSONObject: wrappedData))
-                completionHandler?(decodedObj)
+                completionHandler(decodedObj)
             }
         }
     }
     
-    func patchWithID<T: BackendPersistable>(_ id: Int, type: T.Type, data:  [String: Any], completionHandler: ((T?) -> ())? = nil)  {
+    func patchWithID<T: BackendPersistable>(_ id: Int, type: T.Type, data:  [String: Any], completionHandler: @escaping (T?) -> ())  {
         let relURLString = type.buildURLString(method: .PATCH, id: id, queryString: nil, ownedBy: nil)
         let encodedData = try! JSONSerialization.data(withJSONObject: data)
         let request = BackendDataRequest.patch(relURLString: relURLString!, data:encodedData , contentType: .json)
@@ -76,7 +77,7 @@ struct BackendDataService {
             decoder.dateDecodingStrategy = .customISO8601
             if let wrappedData = returnedData["data"] as? Dictionary<String, Any> {
                 let decodedObj = try? decoder.decode(T.self, from: try! JSONSerialization.data(withJSONObject: wrappedData))
-                completionHandler?(decodedObj)
+                completionHandler(decodedObj)
             }
         }
     }

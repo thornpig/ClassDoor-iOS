@@ -9,24 +9,35 @@
 import Foundation
 
 enum BackendResourceType: String {
-    case User
-    case Uependent
-    case Class
-    case ClassSession
-    case Enrollment
-    case Notification
-    case Address
-    case TemplatedLesson
-    case Lesson
+    case User = "user"
+    case Dependent = "dependent"
+    case Class = "class"
+    case ClassSession = "class_session"
+    case Enrollment = "enrollment"
+    case Organization = "organization"
+    case Notification = "notification"
+    case Address = "address"
+    case TemplateLesson = "template_lesson"
+    case Lesson = "lesson"
+    case RepeatedLesson = "repeated_lesson"
+    case Schedule = "schedule"
+    case TimeSlot = "time_slot"
 }
+
+
 
 protocol BackendPersistable: Codable {
+    associatedtype ModelType: BackendResourceAssociated
+    var id: Int? {get set}
+    var createdAt: Date? {get set}
+    var updatedAt: Date? {get set}
     static var baseURLString: String {get}
-    static func buildURLString(method: RequestMethod, id: Int?, queryString: String?, ownedBy: BackendPersistable?) -> String?
+    static func buildURLString(method: RequestMethod, id: Int?, queryString: String?, ownedBy: ModelType?) -> String?
+    static func buildResource(with obj: ModelType) -> Self
 }
 
-extension BackendPersistable where Self: BaseModel {
-    static func buildURLString(method: RequestMethod, id: Int?, queryString: String? = nil, ownedBy: BackendPersistable? = nil) -> String? {
+extension BackendPersistable {
+    static func buildURLString(method: RequestMethod, id: Int?, queryString: String? = nil, ownedBy: ModelType? = nil) -> String? {
         switch method {
             case .GET,
                 .PATCH,

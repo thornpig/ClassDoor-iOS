@@ -8,8 +8,8 @@
 
 import Foundation
 
-class BaseModel: Codable {
-    var id: Int?
-    var createdAt: Date?
-    var updatedAt: Date?
+protocol BaseModel {
+    var id: Int? {get set}
+    var createdAt: Date? {get set}
+    var updatedAt: Date? {get set}
 }

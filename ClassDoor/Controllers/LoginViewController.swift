@@ -32,9 +32,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if User.validifyUsername(username: username) && User.validifyPassword(password: password) {
                     self.user = User(username: username, passwordHash: password, email: "\(username)@\(username).com", firstname: username, lastname: username)
                 }
-                BackendDataService.shared.save(self.user) {
-                    BackendDataService.shared.getWithID($0!.id!, type: type(of: $0!)) {print($0!.id!)}
-                    BackendDataService.shared.patchWithID($0!.id!, type: type(of: $0!), data: ["last_name": "\(self.user!.lastname)wahaha"]) {print($0!.lastname)}
+                
+//                BackendDataService.shared.save(UserBackendResource(of: self.user!)) {
+                BackendDataService.shared.save( self.user!.backendResource!) {
+//                    BackendDataService.shared.getWithID($0!.id!, type: type(of: $0!)) {print($0!.id!)}
+//                    BackendDataService.shared.patchWithID($0!.id!, type: type(of: $0!), data: ["last_name": "\(self.user!.lastname)wahaha"]) {print($0!.lastname)}
+                    let d0 = Dependent(firstname: "Adela", lastname: "Zhu", dependencyID: $0!.id!)
+                    BackendDataService.shared.save(DependentBackendResource(of: d0)) {
+                        dp in
+                        BackendDataService.shared.getWithID(dp!.dependencyID!, type: UserBackendResource.self) {
+                            userResource in
+                            print(userResource!.dependents![0].id!)
+                        }
+                    }
                 }
             }
         }

@@ -65,6 +65,36 @@
 		366F465D20F27EBD006E04B4 /* TemplateLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F465B20F27EBD006E04B4 /* TemplateLesson.swift */; };
 		366F465F20F27ED4006E04B4 /* RepeatedLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F465E20F27ED4006E04B4 /* RepeatedLesson.swift */; };
 		366F466020F27ED4006E04B4 /* RepeatedLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F465E20F27ED4006E04B4 /* RepeatedLesson.swift */; };
+		366F466220F4351C006E04B4 /* BackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466120F4351C006E04B4 /* BackendResource.swift */; };
+		366F466320F4351C006E04B4 /* BackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466120F4351C006E04B4 /* BackendResource.swift */; };
+		366F466520F43A58006E04B4 /* UserBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466420F43A58006E04B4 /* UserBackendResource.swift */; };
+		366F466620F43A58006E04B4 /* UserBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466420F43A58006E04B4 /* UserBackendResource.swift */; };
+		366F466820F43A80006E04B4 /* PersonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466720F43A80006E04B4 /* PersonBackendResource.swift */; };
+		366F466920F43A80006E04B4 /* PersonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466720F43A80006E04B4 /* PersonBackendResource.swift */; };
+		366F466B20F43A99006E04B4 /* DependentBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466A20F43A99006E04B4 /* DependentBackendResource.swift */; };
+		366F466C20F43A99006E04B4 /* DependentBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466A20F43A99006E04B4 /* DependentBackendResource.swift */; };
+		366F466E20F43AB2006E04B4 /* ClassBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466D20F43AB2006E04B4 /* ClassBackendResource.swift */; };
+		366F466F20F43AB2006E04B4 /* ClassBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466D20F43AB2006E04B4 /* ClassBackendResource.swift */; };
+		366F467120F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */; };
+		366F467220F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */; };
+		366F467420F43AE0006E04B4 /* LessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467320F43AE0006E04B4 /* LessonBackendResource.swift */; };
+		366F467520F43AE0006E04B4 /* LessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467320F43AE0006E04B4 /* LessonBackendResource.swift */; };
+		366F467720F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */; };
+		366F467820F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */; };
+		366F467A20F43B1C006E04B4 /* RepeatedLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467920F43B1C006E04B4 /* RepeatedLessonBackendResource.swift */; };
+		366F467B20F43B1C006E04B4 /* RepeatedLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467920F43B1C006E04B4 /* RepeatedLessonBackendResource.swift */; };
+		366F467D20F43B2B006E04B4 /* EnrollmentBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467C20F43B2B006E04B4 /* EnrollmentBackendResource.swift */; };
+		366F467E20F43B2B006E04B4 /* EnrollmentBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467C20F43B2B006E04B4 /* EnrollmentBackendResource.swift */; };
+		366F468020F43B3C006E04B4 /* NotificationBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467F20F43B3C006E04B4 /* NotificationBackendResource.swift */; };
+		366F468120F43B3C006E04B4 /* NotificationBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467F20F43B3C006E04B4 /* NotificationBackendResource.swift */; };
+		366F468320F43B4E006E04B4 /* OrganizationBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468220F43B4E006E04B4 /* OrganizationBackendResource.swift */; };
+		366F468420F43B4E006E04B4 /* OrganizationBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468220F43B4E006E04B4 /* OrganizationBackendResource.swift */; };
+		366F468620F43B68006E04B4 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468520F43B68006E04B4 /* Organization.swift */; };
+		366F468720F43B68006E04B4 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468520F43B68006E04B4 /* Organization.swift */; };
+		366F468920F43BDC006E04B4 /* AddressBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468820F43BDC006E04B4 /* AddressBackendResource.swift */; };
+		366F468A20F43BDC006E04B4 /* AddressBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468820F43BDC006E04B4 /* AddressBackendResource.swift */; };
+		366F468C20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */; };
+		366F468D20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +153,21 @@
 		366F465820F27EA2006E04B4 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		366F465B20F27EBD006E04B4 /* TemplateLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLesson.swift; sourceTree = "<group>"; };
 		366F465E20F27ED4006E04B4 /* RepeatedLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatedLesson.swift; sourceTree = "<group>"; };
+		366F466120F4351C006E04B4 /* BackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendResource.swift; sourceTree = "<group>"; };
+		366F466420F43A58006E04B4 /* UserBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBackendResource.swift; sourceTree = "<group>"; };
+		366F466720F43A80006E04B4 /* PersonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonBackendResource.swift; sourceTree = "<group>"; };
+		366F466A20F43A99006E04B4 /* DependentBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependentBackendResource.swift; sourceTree = "<group>"; };
+		366F466D20F43AB2006E04B4 /* ClassBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassBackendResource.swift; sourceTree = "<group>"; };
+		366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSessionBackendResource.swift; sourceTree = "<group>"; };
+		366F467320F43AE0006E04B4 /* LessonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonBackendResource.swift; sourceTree = "<group>"; };
+		366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLessonBackendResource.swift; sourceTree = "<group>"; };
+		366F467920F43B1C006E04B4 /* RepeatedLessonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatedLessonBackendResource.swift; sourceTree = "<group>"; };
+		366F467C20F43B2B006E04B4 /* EnrollmentBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentBackendResource.swift; sourceTree = "<group>"; };
+		366F467F20F43B3C006E04B4 /* NotificationBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBackendResource.swift; sourceTree = "<group>"; };
+		366F468220F43B4E006E04B4 /* OrganizationBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationBackendResource.swift; sourceTree = "<group>"; };
+		366F468520F43B68006E04B4 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		366F468820F43BDC006E04B4 /* AddressBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBackendResource.swift; sourceTree = "<group>"; };
+		366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBackendResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,14 +254,15 @@
 			isa = PBXGroup;
 			children = (
 				3612ADBC20EF03A900043A7E /* User.swift */,
+				366F465220F27E69006E04B4 /* Person.swift */,
 				366F465520F27E7A006E04B4 /* Dependent.swift */,
 				366F465820F27EA2006E04B4 /* Class.swift */,
 				366F465B20F27EBD006E04B4 /* TemplateLesson.swift */,
 				366F465E20F27ED4006E04B4 /* RepeatedLesson.swift */,
-				366F465220F27E69006E04B4 /* Person.swift */,
 				3612ADBF20EF03C100043A7E /* Enrollment.swift */,
 				3612ADC520EF041300043A7E /* ClassSession.swift */,
 				3612ADC820EF042400043A7E /* Notification.swift */,
+				366F468520F43B68006E04B4 /* Organization.swift */,
 				3612ADCB20EF043600043A7E /* Lesson.swift */,
 				3612ADCE20EF044400043A7E /* Schedule.swift */,
 				3612ADD120EF046D00043A7E /* Address.swift */,
@@ -262,6 +308,7 @@
 			children = (
 				3612ADFF20F0747800043A7E /* BackendDataService.swift */,
 				3612AE0220F074A500043A7E /* BackendDataRequest.swift */,
+				366F468E20F43BFE006E04B4 /* BackendResources */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -272,6 +319,27 @@
 				3612AE0620F17DAF00043A7E /* utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		366F468E20F43BFE006E04B4 /* BackendResources */ = {
+			isa = PBXGroup;
+			children = (
+				366F466120F4351C006E04B4 /* BackendResource.swift */,
+				366F466420F43A58006E04B4 /* UserBackendResource.swift */,
+				366F466720F43A80006E04B4 /* PersonBackendResource.swift */,
+				366F466A20F43A99006E04B4 /* DependentBackendResource.swift */,
+				366F466D20F43AB2006E04B4 /* ClassBackendResource.swift */,
+				366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */,
+				366F467320F43AE0006E04B4 /* LessonBackendResource.swift */,
+				366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */,
+				366F467920F43B1C006E04B4 /* RepeatedLessonBackendResource.swift */,
+				366F467C20F43B2B006E04B4 /* EnrollmentBackendResource.swift */,
+				366F467F20F43B3C006E04B4 /* NotificationBackendResource.swift */,
+				366F468220F43B4E006E04B4 /* OrganizationBackendResource.swift */,
+				366F468820F43BDC006E04B4 /* AddressBackendResource.swift */,
+				366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */,
+			);
+			path = BackendResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,27 +484,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				3612ADD220EF046D00043A7E /* Address.swift in Sources */,
+				366F468320F43B4E006E04B4 /* OrganizationBackendResource.swift in Sources */,
+				366F468C20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */,
 				3612AE0020F0747800043A7E /* BackendDataService.swift in Sources */,
+				366F468020F43B3C006E04B4 /* NotificationBackendResource.swift in Sources */,
 				3612ADC620EF041300043A7E /* ClassSession.swift in Sources */,
+				366F466520F43A58006E04B4 /* UserBackendResource.swift in Sources */,
 				366F465C20F27EBD006E04B4 /* TemplateLesson.swift in Sources */,
 				3612ADC920EF042400043A7E /* Notification.swift in Sources */,
+				366F467120F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */,
 				366F465620F27E7A006E04B4 /* Dependent.swift in Sources */,
 				3612AD8720EEE4F300043A7E /* AppDelegate.swift in Sources */,
 				3612ADFB20EF099B00043A7E /* BaseModel.swift in Sources */,
+				366F467D20F43B2B006E04B4 /* EnrollmentBackendResource.swift in Sources */,
 				366F465320F27E69006E04B4 /* Person.swift in Sources */,
+				366F467A20F43B1C006E04B4 /* RepeatedLessonBackendResource.swift in Sources */,
 				366F465920F27EA2006E04B4 /* Class.swift in Sources */,
 				3612ADE220EF05C800043A7E /* SignUpViewController.swift in Sources */,
 				3612ADEE20EF06B000043A7E /* ClassViewController.swift in Sources */,
+				366F468620F43B68006E04B4 /* Organization.swift in Sources */,
 				3612AE0720F17DAF00043A7E /* utilities.swift in Sources */,
 				3612ADE820EF061400043A7E /* MainPageViewController.swift in Sources */,
 				3612ADBD20EF03A900043A7E /* User.swift in Sources */,
+				366F466B20F43A99006E04B4 /* DependentBackendResource.swift in Sources */,
+				366F467720F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */,
 				3612ADCC20EF043600043A7E /* Lesson.swift in Sources */,
 				3612ADCF20EF044400043A7E /* Schedule.swift in Sources */,
 				366F465F20F27ED4006E04B4 /* RepeatedLesson.swift in Sources */,
 				3612ADF420EF06C000043A7E /* ProfileViewController.swift in Sources */,
+				366F466E20F43AB2006E04B4 /* ClassBackendResource.swift in Sources */,
+				366F468920F43BDC006E04B4 /* AddressBackendResource.swift in Sources */,
+				366F466220F4351C006E04B4 /* BackendResource.swift in Sources */,
 				3612ADC020EF03C100043A7E /* Enrollment.swift in Sources */,
 				3612AE0320F074A500043A7E /* BackendDataRequest.swift in Sources */,
+				366F467420F43AE0006E04B4 /* LessonBackendResource.swift in Sources */,
 				3612ADDC20EF054100043A7E /* LoginViewController.swift in Sources */,
+				366F466820F43A80006E04B4 /* PersonBackendResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,27 +528,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				3612ADE320EF05C800043A7E /* SignUpViewController.swift in Sources */,
+				366F468420F43B4E006E04B4 /* OrganizationBackendResource.swift in Sources */,
+				366F468D20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */,
 				3612AE0120F0747800043A7E /* BackendDataService.swift in Sources */,
+				366F468120F43B3C006E04B4 /* NotificationBackendResource.swift in Sources */,
 				3612ADBE20EF03A900043A7E /* User.swift in Sources */,
+				366F466620F43A58006E04B4 /* UserBackendResource.swift in Sources */,
 				366F465D20F27EBD006E04B4 /* TemplateLesson.swift in Sources */,
 				3612ADCA20EF042400043A7E /* Notification.swift in Sources */,
+				366F467220F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */,
 				366F465720F27E7A006E04B4 /* Dependent.swift in Sources */,
 				3612ADC120EF03C100043A7E /* Enrollment.swift in Sources */,
 				3612ADF520EF06C000043A7E /* ProfileViewController.swift in Sources */,
+				366F467E20F43B2B006E04B4 /* EnrollmentBackendResource.swift in Sources */,
 				366F465420F27E69006E04B4 /* Person.swift in Sources */,
+				366F467B20F43B1C006E04B4 /* RepeatedLessonBackendResource.swift in Sources */,
 				366F465A20F27EA2006E04B4 /* Class.swift in Sources */,
 				3612ADE920EF061400043A7E /* MainPageViewController.swift in Sources */,
 				3612ADEF20EF06B000043A7E /* ClassViewController.swift in Sources */,
+				366F468720F43B68006E04B4 /* Organization.swift in Sources */,
 				3612AE0820F17DAF00043A7E /* utilities.swift in Sources */,
 				3612ADCD20EF043600043A7E /* Lesson.swift in Sources */,
 				3612AD9C20EEE4F500043A7E /* ClassDoorTests.swift in Sources */,
+				366F466C20F43A99006E04B4 /* DependentBackendResource.swift in Sources */,
+				366F467820F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */,
 				3612ADFC20EF099B00043A7E /* BaseModel.swift in Sources */,
 				3612ADD020EF044400043A7E /* Schedule.swift in Sources */,
 				366F466020F27ED4006E04B4 /* RepeatedLesson.swift in Sources */,
 				3612ADD320EF046D00043A7E /* Address.swift in Sources */,
+				366F466F20F43AB2006E04B4 /* ClassBackendResource.swift in Sources */,
+				366F468A20F43BDC006E04B4 /* AddressBackendResource.swift in Sources */,
+				366F466320F4351C006E04B4 /* BackendResource.swift in Sources */,
 				3612ADDD20EF054100043A7E /* LoginViewController.swift in Sources */,
 				3612AE0420F074A500043A7E /* BackendDataRequest.swift in Sources */,
+				366F467520F43AE0006E04B4 /* LessonBackendResource.swift in Sources */,
 				3612ADC720EF041300043A7E /* ClassSession.swift in Sources */,
+				366F466920F43A80006E04B4 /* PersonBackendResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
