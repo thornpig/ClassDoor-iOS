@@ -20,7 +20,7 @@ struct Person: BackendResourceAssociated, PersonClassifiable {
     var updatedAt: Date?
     var firstname: String
     var lastname: String
-    var _backendResource: PersonBackendResource?
+    lazy var backendResource = PersonBackendResource(of: self)
 
     init(firstname: String, lastname:String) {
         self.firstname = firstname
@@ -32,7 +32,7 @@ struct Person: BackendResourceAssociated, PersonClassifiable {
         self.id = resource.id
         self.createdAt = resource.createdAt
         self.updatedAt = resource.updatedAt
-        self._backendResource = resource
+        self.backendResource = resource
     }
 
 //    var backendResource: PersonBackendResource? {

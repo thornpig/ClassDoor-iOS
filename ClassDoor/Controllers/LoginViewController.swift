@@ -34,11 +34,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
                 
 //                BackendDataService.shared.save(UserBackendResource(of: self.user!)) {
-                BackendDataService.shared.save( self.user!.backendResource!) {
+                BackendDataService.shared.save( self.user!.backendResource) {
 //                    BackendDataService.shared.getWithID($0!.id!, type: type(of: $0!)) {print($0!.id!)}
 //                    BackendDataService.shared.patchWithID($0!.id!, type: type(of: $0!), data: ["last_name": "\(self.user!.lastname)wahaha"]) {print($0!.lastname)}
-                    let d0 = Dependent(firstname: "Adela", lastname: "Zhu", dependencyID: $0!.id!)
-                    BackendDataService.shared.save(DependentBackendResource(of: d0)) {
+                    var d0 = Dependent(firstname: "Adela", lastname: "Zhu", dependencyID: $0!.id!)
+                    BackendDataService.shared.save(d0.backendResource) {
                         dp in
                         BackendDataService.shared.getWithID(dp!.dependencyID!, type: UserBackendResource.self) {
                             userResource in

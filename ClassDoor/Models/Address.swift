@@ -8,13 +8,18 @@
 
 import Foundation
 
-//class Address: BaseModel {
+//struct Address: BackendResourceAssociated {
+//    typealias AssociatedResource = AddressBackendResource
+//    var id: Int?
+//    var createdAt: Date?
+//    var updatedAt: Date?
 //    var primaryStreet: String
 //    var secondaryStreet: String?
 //    var state: String
 //    var zipcode: String
 //    var country: String
-//    var backendResource: AddressBackendResource?
 //    
-//    init(primaryStreet: String, secondaryStreet: String = nil, )
+//    init(with resource: AssociatedResource) {
+//    }
+//
 //}

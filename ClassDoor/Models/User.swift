@@ -18,7 +18,7 @@ struct User: BackendResourceAssociated,  PersonClassifiable {
     var username: String
     var passwordHash: String
     var email: String
-    var _backendResource: User.AssociatedResource?
+    lazy var backendResource = UserBackendResource(of: self)
 
     init(username: String, passwordHash: String, email: String, firstname: String, lastname: String) {
         self.firstname = firstname
@@ -33,7 +33,7 @@ struct User: BackendResourceAssociated,  PersonClassifiable {
         self.id = resource.id
         self.createdAt = resource.createdAt
         self.updatedAt = resource.updatedAt
-        self._backendResource = resource
+        self.backendResource = resource
     }
     
     static func validifyUsername(username: String) -> Bool {

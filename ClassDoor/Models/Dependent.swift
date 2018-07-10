@@ -16,7 +16,7 @@ struct Dependent: BackendResourceAssociated, PersonClassifiable {
     var firstname: String
     var lastname: String
     var dependencyID: Int
-    var _backendResource: DependentBackendResource?
+    lazy var backendResource = DependentBackendResource(of: self)
 
     init(firstname: String, lastname: String, dependencyID: Int) {
         self.firstname = firstname
@@ -26,7 +26,7 @@ struct Dependent: BackendResourceAssociated, PersonClassifiable {
     
     init(with resource: DependentBackendResource) {
         self.init(firstname: resource.firstname!, lastname: resource.lastname!, dependencyID: resource.dependencyID!)
-        self._backendResource = resource
+        self.backendResource = resource
     }
     
 }

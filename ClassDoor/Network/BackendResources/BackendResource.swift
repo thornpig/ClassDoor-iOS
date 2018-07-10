@@ -13,23 +13,24 @@ protocol BackendResourceAssociated {
     var id: Int? {get set}
     var createdAt: Date? {get set}
     var updatedAt: Date? {get set}
-    var _backendResource: AssociatedResource? {get set}
+    var backendResource: AssociatedResource {mutating get set}
+    init(with resource: AssociatedResource)
 }
 
-extension BackendResourceAssociated where AssociatedResource.ModelType == Self {
-
-    var backendResource: AssociatedResource? {
-            mutating get {
-                if self._backendResource == nil {
-                    self._backendResource = AssociatedResource.buildResource(with: self)
-                }
-                return self._backendResource
-            }
-            set {
-                self._backendResource = newValue
-            }
-        }
-}
+//extension BackendResourceAssociated where AssociatedResource.ModelType == Self {
+//
+//    var backendResource: AssociatedResource {
+//        mutating get {
+//            if self._backendResource == nil {
+//                self._backendResource = AssociatedResource.buildResource(with: self)
+//            }
+//            return self._backendResource!
+//        }
+//        set {
+//            self._backendResource = newValue
+//        }
+//    }
+//}
 
 struct BaseBackendResource: Codable {
     var id: Int?

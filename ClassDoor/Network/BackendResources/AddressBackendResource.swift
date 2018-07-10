@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+//struct AddressBackendResource: BackendPersistable {
+//    typealias ModelType = Address
+//
+//    var id: Int?
+//    var createdAt: Date?
+//    var updatedAt: Date?
+//    var primaryStreet: String?
+//    var secondaryStreet: String?
+//    var state: String
+//    var zipcode: String
+//    var country: String
+//
+//    init(of obj: ModelType) {
+//        self.id = obj.id
+//        self.createdAt = obj.createdAt
+//        self.updatedAt = obj.updatedAt
+//        self.primary
+//    }
+//}

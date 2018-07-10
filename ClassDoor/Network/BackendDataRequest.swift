@@ -33,7 +33,8 @@ protocol BackendPersistable: Codable {
     var updatedAt: Date? {get set}
     static var baseURLString: String {get}
     static func buildURLString(method: RequestMethod, id: Int?, queryString: String?, ownedBy: ModelType?) -> String?
-    static func buildResource(with obj: ModelType) -> Self
+    init(of obj: ModelType)
+//    static func buildResource(with obj: ModelType) -> Self
 }
 
 extension BackendPersistable {
