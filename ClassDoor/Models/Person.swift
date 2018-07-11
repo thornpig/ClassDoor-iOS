@@ -13,14 +13,12 @@ protocol PersonClassifiable {
     var lastname: String {get set}
 }
 
-struct Person: BackendResourceAssociated, PersonClassifiable {
-    typealias AssociatedResource = PersonBackendResource
+struct Person: BackendPersistable, PersonClassifiable {
     var id: Int?
     var createdAt: Date?
     var updatedAt: Date?
     var firstname: String
     var lastname: String
-    lazy var backendResource = PersonBackendResource(of: self)
 
     init(firstname: String, lastname:String) {
         self.firstname = firstname
@@ -28,11 +26,11 @@ struct Person: BackendResourceAssociated, PersonClassifiable {
     }
     
     init(with resource: PersonBackendResource) {
-        self.init(firstname:  resource.firstname!, lastname: resource.lastname!)
-        self.id = resource.id
-        self.createdAt = resource.createdAt
-        self.updatedAt = resource.updatedAt
-        self.backendResource = resource
+        let resourceObj = resource.modelObj
+        self.init(firstname:  resourceObj.firstname, lastname: resourceObj.lastname)
+        self.id = resourceObj.id
+        self.createdAt = resourceObj.createdAt
+        self.updatedAt = resourceObj.updatedAt
     }
 
 //    var backendResource: PersonBackendResource? {

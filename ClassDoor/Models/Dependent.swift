@@ -8,15 +8,13 @@
 
 import Foundation
 
-struct Dependent: BackendResourceAssociated, PersonClassifiable {
-    typealias AssociatedResource = DependentBackendResource
+struct Dependent: BackendPersistable, PersonClassifiable {
     var id: Int?
     var createdAt: Date?
     var updatedAt: Date?
     var firstname: String
     var lastname: String
     var dependencyID: Int
-    lazy var backendResource = DependentBackendResource(of: self)
 
     init(firstname: String, lastname: String, dependencyID: Int) {
         self.firstname = firstname
@@ -25,8 +23,11 @@ struct Dependent: BackendResourceAssociated, PersonClassifiable {
     }
     
     init(with resource: DependentBackendResource) {
-        self.init(firstname: resource.firstname!, lastname: resource.lastname!, dependencyID: resource.dependencyID!)
-        self.backendResource = resource
+        let resourceObj = resource.modelObj
+        self.init(firstname: resourceObj.firstname, lastname: resourceObj.lastname, dependencyID: resourceObj.dependencyID)
+        self.id = resourceObj.id
+        self.createdAt = resourceObj.createdAt
+        self.updatedAt = resourceObj.updatedAt
     }
     
 }

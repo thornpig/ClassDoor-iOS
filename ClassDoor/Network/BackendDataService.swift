@@ -27,7 +27,7 @@ struct BackendDataService {
         }
     }
     
-    func save<T: BackendPersistable>(_ obj: T?, completionHandler: @escaping (T?) -> ())  {
+    func save<T: BackendResource>(_ obj: T?, completionHandler: @escaping (T?) -> ())  {
         if obj == nil {
             return
         }
@@ -50,7 +50,7 @@ struct BackendDataService {
         }
     }
     
-    func getWithID<T: BackendPersistable>(_ id: Int, type: T.Type, completionHandler: @escaping (T?) -> ())  {
+    func getWithID<T: BackendResource>(_ id: Int, type: T.Type, completionHandler: @escaping (T?) -> ())  {
         let relURLString = type.buildURLString(method: .GET, id: id, queryString: nil, ownedBy: nil)
         let request = BackendDataRequest.get(relURLString: relURLString!)
         BackendDataService.shared.send(request: request) {
@@ -66,7 +66,7 @@ struct BackendDataService {
         }
     }
     
-    func patchWithID<T: BackendPersistable>(_ id: Int, type: T.Type, data:  [String: Any], completionHandler: @escaping (T?) -> ())  {
+    func patchWithID<T: BackendResource>(_ id: Int, type: T.Type, data:  [String: Any], completionHandler: @escaping (T?) -> ())  {
         let relURLString = type.buildURLString(method: .PATCH, id: id, queryString: nil, ownedBy: nil)
         let encodedData = try! JSONSerialization.data(withJSONObject: data)
         let request = BackendDataRequest.patch(relURLString: relURLString!, data:encodedData , contentType: .json)
