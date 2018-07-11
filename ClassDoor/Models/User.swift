@@ -9,6 +9,7 @@
 import Foundation
 
 struct User: BackendPersistable,  PersonClassifiable {
+    typealias AssociatedResource = UserBackendResource
     
     var id: Int?
     var createdAt: Date?
@@ -20,22 +21,12 @@ struct User: BackendPersistable,  PersonClassifiable {
     var email: String
     var dependents: [Dependent]?
     
-//    lazy var backendResource = UserBackendResource(of: self)
-
     init(username: String, passwordHash: String, email: String, firstname: String, lastname: String) {
         self.firstname = firstname
         self.lastname = lastname
         self.username = username
         self.passwordHash = passwordHash
         self.email = email
-    }
-    
-    init(with resource: UserBackendResource) {
-        let resourceObj = resource.modelObj
-        self.init(username: resourceObj.username, passwordHash: resourceObj.passwordHash, email: resourceObj.email, firstname: resourceObj.firstname, lastname: resourceObj.lastname)
-        self.id = resourceObj.id
-        self.createdAt = resourceObj.createdAt
-        self.updatedAt = resourceObj.updatedAt
     }
     
     static func validifyUsername(username: String) -> Bool {

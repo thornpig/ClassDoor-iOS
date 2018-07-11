@@ -14,6 +14,7 @@ protocol PersonClassifiable {
 }
 
 struct Person: BackendPersistable, PersonClassifiable {
+    typealias AssociatedResource = PersonBackendResource
     var id: Int?
     var createdAt: Date?
     var updatedAt: Date?
@@ -24,25 +25,5 @@ struct Person: BackendPersistable, PersonClassifiable {
         self.firstname = firstname
         self.lastname = lastname
     }
-    
-    init(with resource: PersonBackendResource) {
-        let resourceObj = resource.modelObj
-        self.init(firstname:  resourceObj.firstname, lastname: resourceObj.lastname)
-        self.id = resourceObj.id
-        self.createdAt = resourceObj.createdAt
-        self.updatedAt = resourceObj.updatedAt
-    }
-
-//    var backendResource: PersonBackendResource? {
-//        get {
-//            if self._backendResource == nil {
-//                self._backendResource = PersonBackendResource(of: self)
-//            }
-//            return self._backendResource
-//        }
-//        set {
-//            self._backendResource = newValue
-//        }
-//    }
     
 }

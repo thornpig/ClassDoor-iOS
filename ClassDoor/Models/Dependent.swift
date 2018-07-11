@@ -9,6 +9,7 @@
 import Foundation
 
 struct Dependent: BackendPersistable, PersonClassifiable {
+    typealias AssociatedResource = DependentBackendResource
     var id: Int?
     var createdAt: Date?
     var updatedAt: Date?
@@ -20,14 +21,6 @@ struct Dependent: BackendPersistable, PersonClassifiable {
         self.firstname = firstname
         self.lastname = lastname
         self.dependencyID = dependencyID
-    }
-    
-    init(with resource: DependentBackendResource) {
-        let resourceObj = resource.modelObj
-        self.init(firstname: resourceObj.firstname, lastname: resourceObj.lastname, dependencyID: resourceObj.dependencyID)
-        self.id = resourceObj.id
-        self.createdAt = resourceObj.createdAt
-        self.updatedAt = resourceObj.updatedAt
     }
     
 }

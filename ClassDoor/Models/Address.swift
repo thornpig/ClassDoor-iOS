@@ -8,8 +8,7 @@
 
 import Foundation
 
-//struct Address: BackendResourceAssociated {
-//    typealias AssociatedResource = AddressBackendResource
+//struct Address: BackendPersistable {
 //    var id: Int?
 //    var createdAt: Date?
 //    var updatedAt: Date?
@@ -18,7 +17,7 @@ import Foundation
 //    var state: String
 //    var zipcode: String
 //    var country: String
-//    
+//
 //    init(with resource: AssociatedResource) {
 //    }
 //

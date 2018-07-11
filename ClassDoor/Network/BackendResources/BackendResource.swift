@@ -8,14 +8,37 @@
 
 import Foundation
 
+enum BackendResourceType: String {
+    case User
+    case Dependent
+    case Class
+    case ClassSession
+    case Enrollment
+    case Organization
+    case Notification
+    case Address
+    case TemplateLesson
+    case Lesson
+    case RepeatedLesson
+    case Schedule
+    case TimeSlot
+}
+
 protocol BackendPersistable {
+    associatedtype AssociatedResource: BackendResource
     var id: Int? {get set}
     var createdAt: Date? {get set}
     var updatedAt: Date? {get set}
+    func buildBackendResource() -> AssociatedResource
 //    var backendResource: AssociatedResource {mutating get set}
 //    init(with resource: AssociatedResource)
 }
 
+extension BackendPersistable where AssociatedResource.ModelType == Self {
+    func buildBackendResource() -> AssociatedResource {
+        return AssociatedResource(of: self)
+    }
+}
 //extension BackendResourceAssociated where AssociatedResource.ModelType == Self {
 //
 //    var backendResource: AssociatedResource {
@@ -31,21 +54,7 @@ protocol BackendPersistable {
 //    }
 //}
 
-enum BackendResourceType: String {
-    case User = "user"
-    case Dependent = "dependent"
-    case Class = "class"
-    case ClassSession = "class_session"
-    case Enrollment = "enrollment"
-    case Organization = "organization"
-    case Notification = "notification"
-    case Address = "address"
-    case TemplateLesson = "template_lesson"
-    case Lesson = "lesson"
-    case RepeatedLesson = "repeated_lesson"
-    case Schedule = "schedule"
-    case TimeSlot = "time_slot"
-}
+
 
 protocol BackendResource: Codable {
     associatedtype ModelType: BackendPersistable
