@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360055F220F7F2FC0076B181 /* ClassSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360055F020F7F2FC0076B181 /* ClassSessionViewController.swift */; };
+		360055F320F7F2FC0076B181 /* ClassSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360055F120F7F2FC0076B181 /* ClassSessionViewController.xib */; };
+		360055F820F846370076B181 /* ClassListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360055F620F846370076B181 /* ClassListingViewController.swift */; };
+		360055F920F846370076B181 /* ClassListingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360055F720F846370076B181 /* ClassListingViewController.xib */; };
+		360055FB20F8467D0076B181 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360055FA20F8467D0076B181 /* ClassTableViewCell.swift */; };
 		3612AD8720EEE4F300043A7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612AD8620EEE4F300043A7E /* AppDelegate.swift */; };
 		3612AD8C20EEE4F300043A7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3612AD8A20EEE4F300043A7E /* Main.storyboard */; };
 		3612AD8E20EEE4F500043A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3612AD8D20EEE4F500043A7E /* Assets.xcassets */; };
@@ -21,8 +26,8 @@
 		3612ADC720EF041300043A7E /* ClassSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADC520EF041300043A7E /* ClassSession.swift */; };
 		3612ADC920EF042400043A7E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADC820EF042400043A7E /* Notification.swift */; };
 		3612ADCA20EF042400043A7E /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADC820EF042400043A7E /* Notification.swift */; };
-		3612ADCC20EF043600043A7E /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADCB20EF043600043A7E /* Lesson.swift */; };
-		3612ADCD20EF043600043A7E /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADCB20EF043600043A7E /* Lesson.swift */; };
+		3612ADCC20EF043600043A7E /* IsolatedLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADCB20EF043600043A7E /* IsolatedLesson.swift */; };
+		3612ADCD20EF043600043A7E /* IsolatedLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADCB20EF043600043A7E /* IsolatedLesson.swift */; };
 		3612ADCF20EF044400043A7E /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADCE20EF044400043A7E /* Schedule.swift */; };
 		3612ADD020EF044400043A7E /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADCE20EF044400043A7E /* Schedule.swift */; };
 		3612ADD220EF046D00043A7E /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612ADD120EF046D00043A7E /* Address.swift */; };
@@ -55,6 +60,8 @@
 		3612AE0420F074A500043A7E /* BackendDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612AE0220F074A500043A7E /* BackendDataRequest.swift */; };
 		3612AE0720F17DAF00043A7E /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612AE0620F17DAF00043A7E /* utilities.swift */; };
 		3612AE0820F17DAF00043A7E /* utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612AE0620F17DAF00043A7E /* utilities.swift */; };
+		36334DD220F8848D0099EF29 /* ClassSessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36334DD020F8848D0099EF29 /* ClassSessionTableViewCell.swift */; };
+		36334DD320F8848D0099EF29 /* ClassSessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36334DD120F8848D0099EF29 /* ClassSessionTableViewCell.xib */; };
 		366F465320F27E69006E04B4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F465220F27E69006E04B4 /* Person.swift */; };
 		366F465420F27E69006E04B4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F465220F27E69006E04B4 /* Person.swift */; };
 		366F465620F27E7A006E04B4 /* Dependent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F465520F27E7A006E04B4 /* Dependent.swift */; };
@@ -77,8 +84,8 @@
 		366F466F20F43AB2006E04B4 /* ClassBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F466D20F43AB2006E04B4 /* ClassBackendResource.swift */; };
 		366F467120F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */; };
 		366F467220F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */; };
-		366F467420F43AE0006E04B4 /* LessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467320F43AE0006E04B4 /* LessonBackendResource.swift */; };
-		366F467520F43AE0006E04B4 /* LessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467320F43AE0006E04B4 /* LessonBackendResource.swift */; };
+		366F467420F43AE0006E04B4 /* IsolatedLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467320F43AE0006E04B4 /* IsolatedLessonBackendResource.swift */; };
+		366F467520F43AE0006E04B4 /* IsolatedLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467320F43AE0006E04B4 /* IsolatedLessonBackendResource.swift */; };
 		366F467720F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */; };
 		366F467820F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */; };
 		366F467A20F43B1C006E04B4 /* RepeatedLessonBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F467920F43B1C006E04B4 /* RepeatedLessonBackendResource.swift */; };
@@ -95,6 +102,22 @@
 		366F468A20F43BDC006E04B4 /* AddressBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468820F43BDC006E04B4 /* AddressBackendResource.swift */; };
 		366F468C20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */; };
 		366F468D20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */; };
+		366F469020F5C7DB006E04B4 /* TimeslotBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468F20F5C7DA006E04B4 /* TimeslotBackendResource.swift */; };
+		366F469120F5C7DB006E04B4 /* TimeslotBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F468F20F5C7DA006E04B4 /* TimeslotBackendResource.swift */; };
+		366F469320F5C7F3006E04B4 /* Timeslot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469220F5C7F3006E04B4 /* Timeslot.swift */; };
+		366F469420F5C7F3006E04B4 /* Timeslot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469220F5C7F3006E04B4 /* Timeslot.swift */; };
+		366F469620F5DA8F006E04B4 /* OrgPerAssn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469520F5DA8F006E04B4 /* OrgPerAssn.swift */; };
+		366F469720F5DA8F006E04B4 /* OrgPerAssn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469520F5DA8F006E04B4 /* OrgPerAssn.swift */; };
+		366F469920F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469820F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift */; };
+		366F469A20F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469820F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift */; };
+		366F469F20F5EA84006E04B4 /* NotifDeliveryBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469E20F5EA84006E04B4 /* NotifDeliveryBackendResource.swift */; };
+		366F46A020F5EA84006E04B4 /* NotifDeliveryBackendResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F469E20F5EA84006E04B4 /* NotifDeliveryBackendResource.swift */; };
+		366F46A220F5EAEB006E04B4 /* NotifDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F46A120F5EAEB006E04B4 /* NotifDelivery.swift */; };
+		366F46A320F5EAEB006E04B4 /* NotifDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F46A120F5EAEB006E04B4 /* NotifDelivery.swift */; };
+		366F46A620F7388E006E04B4 /* DependentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F46A420F7388D006E04B4 /* DependentViewController.swift */; };
+		366F46A720F7388E006E04B4 /* DependentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366F46A420F7388D006E04B4 /* DependentViewController.swift */; };
+		366F46A820F7388E006E04B4 /* DependentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366F46A520F7388D006E04B4 /* DependentViewController.xib */; };
+		366F46A920F7388E006E04B4 /* DependentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366F46A520F7388D006E04B4 /* DependentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +138,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		360055F020F7F2FC0076B181 /* ClassSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSessionViewController.swift; sourceTree = "<group>"; };
+		360055F120F7F2FC0076B181 /* ClassSessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassSessionViewController.xib; sourceTree = "<group>"; };
+		360055F620F846370076B181 /* ClassListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListingViewController.swift; sourceTree = "<group>"; };
+		360055F720F846370076B181 /* ClassListingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassListingViewController.xib; sourceTree = "<group>"; };
+		360055FA20F8467D0076B181 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
 		3612AD8320EEE4F300043A7E /* ClassDoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassDoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3612AD8620EEE4F300043A7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3612AD8B20EEE4F300043A7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,7 +159,7 @@
 		3612ADBF20EF03C100043A7E /* Enrollment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enrollment.swift; sourceTree = "<group>"; };
 		3612ADC520EF041300043A7E /* ClassSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSession.swift; sourceTree = "<group>"; };
 		3612ADC820EF042400043A7E /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		3612ADCB20EF043600043A7E /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		3612ADCB20EF043600043A7E /* IsolatedLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsolatedLesson.swift; sourceTree = "<group>"; };
 		3612ADCE20EF044400043A7E /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		3612ADD120EF046D00043A7E /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		3612ADDA20EF054100043A7E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +176,8 @@
 		3612ADFF20F0747800043A7E /* BackendDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendDataService.swift; sourceTree = "<group>"; };
 		3612AE0220F074A500043A7E /* BackendDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendDataRequest.swift; sourceTree = "<group>"; };
 		3612AE0620F17DAF00043A7E /* utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utilities.swift; sourceTree = "<group>"; };
+		36334DD020F8848D0099EF29 /* ClassSessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSessionTableViewCell.swift; sourceTree = "<group>"; };
+		36334DD120F8848D0099EF29 /* ClassSessionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassSessionTableViewCell.xib; sourceTree = "<group>"; };
 		366F465220F27E69006E04B4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		366F465520F27E7A006E04B4 /* Dependent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependent.swift; sourceTree = "<group>"; };
 		366F465820F27EA2006E04B4 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
@@ -159,7 +189,7 @@
 		366F466A20F43A99006E04B4 /* DependentBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependentBackendResource.swift; sourceTree = "<group>"; };
 		366F466D20F43AB2006E04B4 /* ClassBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassBackendResource.swift; sourceTree = "<group>"; };
 		366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSessionBackendResource.swift; sourceTree = "<group>"; };
-		366F467320F43AE0006E04B4 /* LessonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonBackendResource.swift; sourceTree = "<group>"; };
+		366F467320F43AE0006E04B4 /* IsolatedLessonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsolatedLessonBackendResource.swift; sourceTree = "<group>"; };
 		366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateLessonBackendResource.swift; sourceTree = "<group>"; };
 		366F467920F43B1C006E04B4 /* RepeatedLessonBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatedLessonBackendResource.swift; sourceTree = "<group>"; };
 		366F467C20F43B2B006E04B4 /* EnrollmentBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentBackendResource.swift; sourceTree = "<group>"; };
@@ -168,6 +198,14 @@
 		366F468520F43B68006E04B4 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		366F468820F43BDC006E04B4 /* AddressBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBackendResource.swift; sourceTree = "<group>"; };
 		366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBackendResource.swift; sourceTree = "<group>"; };
+		366F468F20F5C7DA006E04B4 /* TimeslotBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeslotBackendResource.swift; sourceTree = "<group>"; };
+		366F469220F5C7F3006E04B4 /* Timeslot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeslot.swift; sourceTree = "<group>"; };
+		366F469520F5DA8F006E04B4 /* OrgPerAssn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgPerAssn.swift; sourceTree = "<group>"; };
+		366F469820F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgPerAssnBackendResource.swift; sourceTree = "<group>"; };
+		366F469E20F5EA84006E04B4 /* NotifDeliveryBackendResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifDeliveryBackendResource.swift; sourceTree = "<group>"; };
+		366F46A120F5EAEB006E04B4 /* NotifDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifDelivery.swift; sourceTree = "<group>"; };
+		366F46A420F7388D006E04B4 /* DependentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependentViewController.swift; sourceTree = "<group>"; };
+		366F46A520F7388D006E04B4 /* DependentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DependentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,9 +300,12 @@
 				3612ADBF20EF03C100043A7E /* Enrollment.swift */,
 				3612ADC520EF041300043A7E /* ClassSession.swift */,
 				3612ADC820EF042400043A7E /* Notification.swift */,
+				366F46A120F5EAEB006E04B4 /* NotifDelivery.swift */,
 				366F468520F43B68006E04B4 /* Organization.swift */,
-				3612ADCB20EF043600043A7E /* Lesson.swift */,
+				366F469520F5DA8F006E04B4 /* OrgPerAssn.swift */,
+				3612ADCB20EF043600043A7E /* IsolatedLesson.swift */,
 				3612ADCE20EF044400043A7E /* Schedule.swift */,
+				366F469220F5C7F3006E04B4 /* Timeslot.swift */,
 				3612ADD120EF046D00043A7E /* Address.swift */,
 				3612ADFA20EF099B00043A7E /* BaseModel.swift */,
 			);
@@ -274,6 +315,9 @@
 		3612ADB620EF02C700043A7E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				360055FA20F8467D0076B181 /* ClassTableViewCell.swift */,
+				36334DD020F8848D0099EF29 /* ClassSessionTableViewCell.swift */,
+				36334DD120F8848D0099EF29 /* ClassSessionTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,8 +333,14 @@
 				3612ADE720EF061400043A7E /* MainPageViewController.xib */,
 				3612ADEC20EF06B000043A7E /* ClassViewController.swift */,
 				3612ADED20EF06B000043A7E /* ClassViewController.xib */,
+				360055F620F846370076B181 /* ClassListingViewController.swift */,
+				360055F720F846370076B181 /* ClassListingViewController.xib */,
+				360055F020F7F2FC0076B181 /* ClassSessionViewController.swift */,
+				360055F120F7F2FC0076B181 /* ClassSessionViewController.xib */,
 				3612ADF220EF06C000043A7E /* ProfileViewController.swift */,
 				3612ADF320EF06C000043A7E /* ProfileViewController.xib */,
+				366F46A420F7388D006E04B4 /* DependentViewController.swift */,
+				366F46A520F7388D006E04B4 /* DependentViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -330,14 +380,17 @@
 				366F466A20F43A99006E04B4 /* DependentBackendResource.swift */,
 				366F466D20F43AB2006E04B4 /* ClassBackendResource.swift */,
 				366F467020F43ACA006E04B4 /* ClassSessionBackendResource.swift */,
-				366F467320F43AE0006E04B4 /* LessonBackendResource.swift */,
+				366F467320F43AE0006E04B4 /* IsolatedLessonBackendResource.swift */,
 				366F467620F43B04006E04B4 /* TemplateLessonBackendResource.swift */,
 				366F467920F43B1C006E04B4 /* RepeatedLessonBackendResource.swift */,
 				366F467C20F43B2B006E04B4 /* EnrollmentBackendResource.swift */,
 				366F467F20F43B3C006E04B4 /* NotificationBackendResource.swift */,
+				366F469E20F5EA84006E04B4 /* NotifDeliveryBackendResource.swift */,
 				366F468220F43B4E006E04B4 /* OrganizationBackendResource.swift */,
+				366F469820F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift */,
 				366F468820F43BDC006E04B4 /* AddressBackendResource.swift */,
 				366F468B20F43BEF006E04B4 /* ScheduleBackendResource.swift */,
+				366F468F20F5C7DA006E04B4 /* TimeslotBackendResource.swift */,
 			);
 			path = BackendResources;
 			sourceTree = "<group>";
@@ -448,8 +501,12 @@
 			files = (
 				3612ADE420EF05C800043A7E /* SignUpViewController.xib in Resources */,
 				3612ADDE20EF054100043A7E /* LoginViewController.xib in Resources */,
+				360055F920F846370076B181 /* ClassListingViewController.xib in Resources */,
+				366F46A820F7388E006E04B4 /* DependentViewController.xib in Resources */,
 				3612ADF620EF06C000043A7E /* ProfileViewController.xib in Resources */,
+				360055F320F7F2FC0076B181 /* ClassSessionViewController.xib in Resources */,
 				3612AD9120EEE4F500043A7E /* LaunchScreen.storyboard in Resources */,
+				36334DD320F8848D0099EF29 /* ClassSessionTableViewCell.xib in Resources */,
 				3612ADF020EF06B000043A7E /* ClassViewController.xib in Resources */,
 				3612AD8E20EEE4F500043A7E /* Assets.xcassets in Resources */,
 				3612ADEA20EF061400043A7E /* MainPageViewController.xib in Resources */,
@@ -463,6 +520,7 @@
 			files = (
 				3612ADE520EF05C800043A7E /* SignUpViewController.xib in Resources */,
 				3612ADF120EF06B000043A7E /* ClassViewController.xib in Resources */,
+				366F46A920F7388E006E04B4 /* DependentViewController.xib in Resources */,
 				3612ADEB20EF061400043A7E /* MainPageViewController.xib in Resources */,
 				3612ADF720EF06C000043A7E /* ProfileViewController.xib in Resources */,
 				3612ADDF20EF054100043A7E /* LoginViewController.xib in Resources */,
@@ -484,19 +542,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3612ADD220EF046D00043A7E /* Address.swift in Sources */,
+				366F469F20F5EA84006E04B4 /* NotifDeliveryBackendResource.swift in Sources */,
 				366F468320F43B4E006E04B4 /* OrganizationBackendResource.swift in Sources */,
+				360055F220F7F2FC0076B181 /* ClassSessionViewController.swift in Sources */,
 				366F468C20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */,
 				3612AE0020F0747800043A7E /* BackendDataService.swift in Sources */,
 				366F468020F43B3C006E04B4 /* NotificationBackendResource.swift in Sources */,
 				3612ADC620EF041300043A7E /* ClassSession.swift in Sources */,
 				366F466520F43A58006E04B4 /* UserBackendResource.swift in Sources */,
+				366F469320F5C7F3006E04B4 /* Timeslot.swift in Sources */,
 				366F465C20F27EBD006E04B4 /* TemplateLesson.swift in Sources */,
 				3612ADC920EF042400043A7E /* Notification.swift in Sources */,
 				366F467120F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */,
 				366F465620F27E7A006E04B4 /* Dependent.swift in Sources */,
 				3612AD8720EEE4F300043A7E /* AppDelegate.swift in Sources */,
+				366F46A620F7388E006E04B4 /* DependentViewController.swift in Sources */,
 				3612ADFB20EF099B00043A7E /* BaseModel.swift in Sources */,
 				366F467D20F43B2B006E04B4 /* EnrollmentBackendResource.swift in Sources */,
+				366F469620F5DA8F006E04B4 /* OrgPerAssn.swift in Sources */,
 				366F465320F27E69006E04B4 /* Person.swift in Sources */,
 				366F467A20F43B1C006E04B4 /* RepeatedLessonBackendResource.swift in Sources */,
 				366F465920F27EA2006E04B4 /* Class.swift in Sources */,
@@ -508,16 +571,22 @@
 				3612ADBD20EF03A900043A7E /* User.swift in Sources */,
 				366F466B20F43A99006E04B4 /* DependentBackendResource.swift in Sources */,
 				366F467720F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */,
-				3612ADCC20EF043600043A7E /* Lesson.swift in Sources */,
+				3612ADCC20EF043600043A7E /* IsolatedLesson.swift in Sources */,
 				3612ADCF20EF044400043A7E /* Schedule.swift in Sources */,
 				366F465F20F27ED4006E04B4 /* RepeatedLesson.swift in Sources */,
+				366F46A220F5EAEB006E04B4 /* NotifDelivery.swift in Sources */,
 				3612ADF420EF06C000043A7E /* ProfileViewController.swift in Sources */,
 				366F466E20F43AB2006E04B4 /* ClassBackendResource.swift in Sources */,
+				360055F820F846370076B181 /* ClassListingViewController.swift in Sources */,
 				366F468920F43BDC006E04B4 /* AddressBackendResource.swift in Sources */,
 				366F466220F4351C006E04B4 /* BackendResource.swift in Sources */,
+				36334DD220F8848D0099EF29 /* ClassSessionTableViewCell.swift in Sources */,
 				3612ADC020EF03C100043A7E /* Enrollment.swift in Sources */,
 				3612AE0320F074A500043A7E /* BackendDataRequest.swift in Sources */,
-				366F467420F43AE0006E04B4 /* LessonBackendResource.swift in Sources */,
+				366F467420F43AE0006E04B4 /* IsolatedLessonBackendResource.swift in Sources */,
+				366F469920F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift in Sources */,
+				360055FB20F8467D0076B181 /* ClassTableViewCell.swift in Sources */,
+				366F469020F5C7DB006E04B4 /* TimeslotBackendResource.swift in Sources */,
 				3612ADDC20EF054100043A7E /* LoginViewController.swift in Sources */,
 				366F466820F43A80006E04B4 /* PersonBackendResource.swift in Sources */,
 			);
@@ -528,19 +597,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3612ADE320EF05C800043A7E /* SignUpViewController.swift in Sources */,
+				366F46A020F5EA84006E04B4 /* NotifDeliveryBackendResource.swift in Sources */,
 				366F468420F43B4E006E04B4 /* OrganizationBackendResource.swift in Sources */,
 				366F468D20F43BEF006E04B4 /* ScheduleBackendResource.swift in Sources */,
 				3612AE0120F0747800043A7E /* BackendDataService.swift in Sources */,
 				366F468120F43B3C006E04B4 /* NotificationBackendResource.swift in Sources */,
 				3612ADBE20EF03A900043A7E /* User.swift in Sources */,
 				366F466620F43A58006E04B4 /* UserBackendResource.swift in Sources */,
+				366F469420F5C7F3006E04B4 /* Timeslot.swift in Sources */,
 				366F465D20F27EBD006E04B4 /* TemplateLesson.swift in Sources */,
 				3612ADCA20EF042400043A7E /* Notification.swift in Sources */,
 				366F467220F43ACA006E04B4 /* ClassSessionBackendResource.swift in Sources */,
 				366F465720F27E7A006E04B4 /* Dependent.swift in Sources */,
 				3612ADC120EF03C100043A7E /* Enrollment.swift in Sources */,
+				366F46A720F7388E006E04B4 /* DependentViewController.swift in Sources */,
 				3612ADF520EF06C000043A7E /* ProfileViewController.swift in Sources */,
 				366F467E20F43B2B006E04B4 /* EnrollmentBackendResource.swift in Sources */,
+				366F469720F5DA8F006E04B4 /* OrgPerAssn.swift in Sources */,
 				366F465420F27E69006E04B4 /* Person.swift in Sources */,
 				366F467B20F43B1C006E04B4 /* RepeatedLessonBackendResource.swift in Sources */,
 				366F465A20F27EA2006E04B4 /* Class.swift in Sources */,
@@ -548,20 +621,23 @@
 				3612ADEF20EF06B000043A7E /* ClassViewController.swift in Sources */,
 				366F468720F43B68006E04B4 /* Organization.swift in Sources */,
 				3612AE0820F17DAF00043A7E /* utilities.swift in Sources */,
-				3612ADCD20EF043600043A7E /* Lesson.swift in Sources */,
+				3612ADCD20EF043600043A7E /* IsolatedLesson.swift in Sources */,
 				3612AD9C20EEE4F500043A7E /* ClassDoorTests.swift in Sources */,
 				366F466C20F43A99006E04B4 /* DependentBackendResource.swift in Sources */,
 				366F467820F43B04006E04B4 /* TemplateLessonBackendResource.swift in Sources */,
 				3612ADFC20EF099B00043A7E /* BaseModel.swift in Sources */,
 				3612ADD020EF044400043A7E /* Schedule.swift in Sources */,
 				366F466020F27ED4006E04B4 /* RepeatedLesson.swift in Sources */,
+				366F46A320F5EAEB006E04B4 /* NotifDelivery.swift in Sources */,
 				3612ADD320EF046D00043A7E /* Address.swift in Sources */,
 				366F466F20F43AB2006E04B4 /* ClassBackendResource.swift in Sources */,
 				366F468A20F43BDC006E04B4 /* AddressBackendResource.swift in Sources */,
 				366F466320F4351C006E04B4 /* BackendResource.swift in Sources */,
 				3612ADDD20EF054100043A7E /* LoginViewController.swift in Sources */,
 				3612AE0420F074A500043A7E /* BackendDataRequest.swift in Sources */,
-				366F467520F43AE0006E04B4 /* LessonBackendResource.swift in Sources */,
+				366F467520F43AE0006E04B4 /* IsolatedLessonBackendResource.swift in Sources */,
+				366F469A20F5DAAB006E04B4 /* OrgPerAssnBackendResource.swift in Sources */,
+				366F469120F5C7DB006E04B4 /* TimeslotBackendResource.swift in Sources */,
 				3612ADC720EF041300043A7E /* ClassSession.swift in Sources */,
 				366F466920F43A80006E04B4 /* PersonBackendResource.swift in Sources */,
 			);

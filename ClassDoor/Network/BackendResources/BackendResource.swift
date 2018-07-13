@@ -8,14 +8,16 @@
 
 import Foundation
 
-enum BackendResourceType: String {
+enum BackendResourceType: String, Codable {
     case User
     case Dependent
     case Class
     case ClassSession
     case Enrollment
     case Organization
+    case OrganizationPersonAssociation
     case Notification
+    case NotificationDelievery
     case Address
     case TemplateLesson
     case Lesson
@@ -27,6 +29,7 @@ enum BackendResourceType: String {
 protocol BackendPersistable {
     associatedtype AssociatedResource: BackendResource
     var id: Int? {get set}
+    var _type: BackendResourceType? {get set}
     var createdAt: Date? {get set}
     var updatedAt: Date? {get set}
     func buildBackendResource() -> AssociatedResource
@@ -60,18 +63,18 @@ protocol BackendResource: Codable {
     associatedtype ModelType: BackendPersistable
     var modelObj: ModelType {get set}
     static var baseURLString: String {get}
-    static func buildURLString(method: RequestMethod, id: Int?, queryString: String?, ownedBy: ModelType?) -> String?
+    static func buildURLString(method: RequestMethod, identifier: LosslessStringConvertible?, queryString: String?, ownedBy: ModelType?) -> String?
     init(of obj: ModelType)
     //    static func buildResource(with obj: ModelType) -> Self
 }
 
 extension BackendResource {
-    static func buildURLString(method: RequestMethod, id: Int?, queryString: String? = nil, ownedBy: ModelType? = nil) -> String? {
+    static func buildURLString(method: RequestMethod, identifier: LosslessStringConvertible?, queryString: String? = nil, ownedBy: ModelType? = nil) -> String? {
         switch method {
         case .GET,
              .PATCH,
              .DELETE:
-            return "\(Self.baseURLString)/\(id!)"
+            return "\(Self.baseURLString)/\(identifier!)"
         case .POST:
             return Self.baseURLString
         }

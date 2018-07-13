@@ -1,19 +1,19 @@
 //
-//  EnrollmentBackendResource.swift
+//  OrgPerAssnBackendResource.swift
 //  ClassDoor
 //
-//  Created by zhenduo zhu on 7/9/18.
+//  Created by zhenduo zhu on 7/10/18.
 //  Copyright © 2018 zhenduo zhu. All rights reserved.
 //
 
 import Foundation
 
-struct EnrollmentBackendResource: BackendResource {
-    typealias ModelType = Enrollment
+struct OrgPerAssnBackendResource: BackendResource {
+    typealias ModelType = OrgPerAssn
     static var baseURLString: String {
-        return "/enrollments"
+        return "/org-per-assns"
     }
-    var modelObj: ModelType
+    var modelObj: OrgPerAssn
     
     init(of obj: ModelType) {
         self.modelObj = obj
@@ -24,8 +24,8 @@ struct EnrollmentBackendResource: BackendResource {
         case _type
         case createdAt = "created_at"
         case updatedAt = "updated_at"
-        case classSessionID = "class_session_id"
-        case enrolledPersonID = "enrolled_person_id"
+        case organizationID = "organization_id"
+        case associatedPersonID = "associated_person_id"
         case initiatorID = "initiator_id"
         case terminated
     }
@@ -36,17 +36,17 @@ struct EnrollmentBackendResource: BackendResource {
         let _type = try container.decode(BackendResourceType.self, forKey: ._type)
         let createdAt = try container.decodeIfPresent(Date.self, forKey: .createdAt)
         let updatedAt = try container.decodeIfPresent(Date.self, forKey: .updatedAt)
-        let classSessionID = try container.decode(Int.self, forKey: .classSessionID)
-        let enrolledPersonID = try container.decode(Int.self, forKey: .enrolledPersonID)
+        let organizationID = try container.decode(Int.self, forKey: .organizationID)
         let initiatorID = try container.decode(Int.self, forKey: .initiatorID)
+        let associatedPersonID = try container.decode(Int.self, forKey: .associatedPersonID)
         let terminated = try container.decode(Bool.self, forKey: .terminated)
-        self.modelObj = Enrollment(classSessionID: classSessionID, enrolledPersonID: enrolledPersonID, initiatorID: initiatorID, terminated: terminated, id: id, _type: _type, createdAt: createdAt, updatedAt: updatedAt)
+        self.modelObj = OrgPerAssn(organizationID: organizationID, associatedPersonID: associatedPersonID, initiatorID: initiatorID, terminated: terminated, id: id, _type: _type, createdAt: createdAt, updatedAt: updatedAt)
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.modelObj.classSessionID, forKey: .classSessionID)
-        try container.encode(self.modelObj.enrolledPersonID, forKey: .enrolledPersonID)
+        try container.encode(self.modelObj.organizationID, forKey: .organizationID)
+        try container.encode(self.modelObj.associatedPersonID, forKey: .associatedPersonID)
         try container.encode(self.modelObj.initiatorID, forKey: .initiatorID)
         try container.encode(self.modelObj.terminated, forKey: .terminated)
     }

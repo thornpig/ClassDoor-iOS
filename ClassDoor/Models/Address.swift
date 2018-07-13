@@ -8,17 +8,29 @@
 
 import Foundation
 
-//struct Address: BackendPersistable {
-//    var id: Int?
-//    var createdAt: Date?
-//    var updatedAt: Date?
-//    var primaryStreet: String
-//    var secondaryStreet: String?
-//    var state: String
-//    var zipcode: String
-//    var country: String
-//
-//    init(with resource: AssociatedResource) {
-//    }
-//
-//}
+struct Address: BackendPersistable {
+    typealias AssociatedResource = AddressBackendResource
+    var id: Int?
+    var _type: BackendResourceType?
+    var createdAt: Date?
+    var updatedAt: Date?
+    var primaryStreet: String
+    var secondaryStreet: String?
+    var state: String
+    var zipcode: String
+    var country: String
+    var creatorID: Int
+
+    init(primaryStreet: String, secondaryStreet: String? = nil, state:String, zipcode: String, country: String, creatorID: Int, id: Int? = nil, _type: BackendResourceType? = nil, createdAt: Date? = nil, updatedAt: Date? = nil) {
+        self.primaryStreet = primaryStreet
+        self.secondaryStreet = secondaryStreet
+        self.state = state
+        self.zipcode = zipcode
+        self.country = country
+        self.creatorID = creatorID
+        self.id = id
+        self._type = _type
+        self.createdAt = createdAt
+        self.updatedAt = updatedAt
+    }
+}

@@ -19,14 +19,15 @@ struct PersonBackendResource:  BackendResource {
         return "/persons"
     }
     
-    var modelObj: Person
+    var modelObj: ModelType
 
-    init(of person: Person) {
-        self.modelObj = person
+    init(of obj: ModelType) {
+        self.modelObj = obj
     }
     
     enum CodingKeys: String, CodingKey {
         case id
+        case _type
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case firstname = "first_name"
@@ -36,14 +37,12 @@ struct PersonBackendResource:  BackendResource {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let id = try container.decode(Int.self, forKey: .id)
+        let _type = try container.decode(BackendResourceType.self, forKey: ._type)
         let createdAt = try container.decodeIfPresent(Date.self, forKey: .createdAt)
         let updatedAt = try container.decodeIfPresent(Date.self, forKey: .updatedAt)
         let firstname = try container.decode(String.self, forKey: .firstname)
         let lastname = try container.decode(String.self, forKey: .lastname)
-        self.modelObj = Person(firstname: firstname, lastname: lastname)
-        self.modelObj.id = id
-        self.modelObj.createdAt = createdAt
-        self.modelObj.updatedAt = updatedAt
+        self.modelObj = Person(firstname: firstname, lastname: lastname, id: id,  _type: _type, createdAt: createdAt, updatedAt: updatedAt)
     }
     
     func encode(to encoder: Encoder) throws {

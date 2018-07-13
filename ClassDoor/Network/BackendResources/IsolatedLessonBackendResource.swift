@@ -1,5 +1,5 @@
 //
-//  TemplateLessonBackendResource.swift
+//  LessonBackendResource.swift
 //  ClassDoor
 //
 //  Created by zhenduo zhu on 7/9/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct TemplateLessonBackendResource: BackendResource {
-    typealias ModelType = TemplateLesson
+struct IsolatedLessonBackendResource: BackendResource {
+    typealias ModelType = IsolatedLesson
     static var baseURLString: String {
-        return "/template-lessons"
+        return "/lessons"
     }
     var modelObj: ModelType
     
@@ -24,8 +24,9 @@ struct TemplateLessonBackendResource: BackendResource {
         case _type
         case createdAt = "created_at"
         case updatedAt = "updated_at"
-        case timeslotID = "time_slot_id"
         case classSessionID = "class_session_id"
+        case startAt = "start_at"
+        case duration
         case locationID = "location_id"
     }
     
@@ -36,15 +37,17 @@ struct TemplateLessonBackendResource: BackendResource {
         let createdAt = try container.decodeIfPresent(Date.self, forKey: .createdAt)
         let updatedAt = try container.decodeIfPresent(Date.self, forKey: .updatedAt)
         let classSessionID = try container.decode(Int.self, forKey: .classSessionID)
-        let timeslotID = try container.decode(Int.self, forKey: .timeslotID)
+        let startAt = try container.decode(Date.self, forKey: .startAt)
+        let duration = try container.decode(Int.self, forKey: .duration)
         let locationID = try container.decodeIfPresent(Int.self, forKey: .locationID)
-        self.modelObj = TemplateLesson(timeslotID: timeslotID, classSessionID: classSessionID, locationID: locationID, id: id, _type: _type, createdAt: createdAt, updatedAt: updatedAt)
+        self.modelObj = IsolatedLesson(classSessionID: classSessionID, startAt: startAt, duration: duration, locationID: locationID, id: id, _type: _type, createdAt: createdAt, updatedAt: updatedAt)
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.modelObj.classSessionID, forKey: .classSessionID)
-        try container.encode(self.modelObj.timeslotID, forKey: .timeslotID)
+        try container.encode(self.modelObj.startAt, forKey: .startAt)
+        try container.encode(self.modelObj.duration, forKey: .duration)
         try container.encodeIfPresent(self.modelObj.locationID, forKey: .locationID)
     }
 }
