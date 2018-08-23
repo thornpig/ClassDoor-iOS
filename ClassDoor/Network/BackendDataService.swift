@@ -33,7 +33,7 @@ struct BackendDataService {
         guard let encodedObj = try? encoder.encode(obj) else {
             return
         }
-        print(String(data: encodedObj, encoding: .utf8)!)
+        //print(String(data: encodedObj, encoding: .utf8)!)
         guard let relURLString = type(of: obj).buildURLString(method: .POST, identifier: nil, queryString: nil, ownedBy: nil) else {
             print("failed to build request url string!")
             return
@@ -45,7 +45,7 @@ struct BackendDataService {
                 print("response data is nil!")
                 return
             }
-            print(String(data: data, encoding: .utf8))
+            //print(String(data: data, encoding: .utf8))
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
                     print("http response failed!")
@@ -80,7 +80,7 @@ struct BackendDataService {
                 print("response data is nil!")
                 return
             }
-            print(String(data: data, encoding: .utf8))
+            //print(String(data: data, encoding: .utf8))
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
                     print("http response failed!")
@@ -102,6 +102,27 @@ struct BackendDataService {
         }
     }
     
+    func getWithIdentifiers<T: BackendResource>(_ identifiers: [LosslessStringConvertible], type: T.Type, completionHandler: @escaping ([T.ModelType]) -> ())  {
+        let dpGroup = DispatchGroup()
+        var items = [T.ModelType]()
+        for id in identifiers {
+            dpGroup.enter()
+            BackendDataService.shared.getWithIdentifier(id, type: type) {
+                defer {
+                    dpGroup.leave()
+                }
+                guard let item = $0?.modelObj else {
+                    print("could not find item \(id)")
+                    return
+                }
+                items.append(item)
+            }
+        }
+        dpGroup.notify(queue: DispatchQueue.main) {
+            completionHandler(items)
+        }
+    }
+    
     func patchWithID<T: BackendResource>(_ id: Int, type: T.Type, data:  [String: Any], completionHandler: @escaping (T?) -> ())  {
         guard let encodedData = try? JSONSerialization.data(withJSONObject: data) else {
             print("failed to encode patch data!")
@@ -118,7 +139,7 @@ struct BackendDataService {
                 print("response data is nil!")
                 return
             }
-            print(String(data: data, encoding: .utf8))
+            //print(String(data: data, encoding: .utf8))
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
                     print("http response failed!")

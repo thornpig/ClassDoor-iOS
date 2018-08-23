@@ -36,7 +36,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
 
         self.arrangeViews(with: self.signStatus)
-        // Do any additional setup after loading the view.
     }
     
     func arrangeViews(with status: SignStatus) {
@@ -78,11 +77,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onSignInUpButtonTapped(_ sender: UIButton) {
         switch self.signStatus {
         case .In:
-            guard let username = self.usernameTextField.text, let password = self.passwordTextField.text, User.validifyUsername(username: username) && User.validifyPassword(password: password) else {
-                print("Invalid username or password!")
-                return
-            }
-            self.user = User(username: username,  passwordHash: password)
+//            guard let username = self.usernameTextField.text, let password = self.passwordTextField.text, User.validifyUsername(username: username) && User.validifyPassword(password: password) else {
+//                print("Invalid username or password!")
+//                return
+//            }
+//            self.user = User(username: username,  passwordHash: password)
+            self.user = User(username: "zackzhu",  passwordHash: "123456")
             self.signIn(self.user!)
         case .Up:
             guard let username = self.usernameTextField.text, let password = self.passwordTextField.text, let email = self.emailTextField.text, let firstname = self.firstnameTextField.text, let lastname = self.lastnameTextField.text, User.validifyUsername(username: username) && User.validifyPassword(password: password) else {

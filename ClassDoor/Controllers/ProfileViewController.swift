@@ -113,7 +113,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
-        self.tableView.rowHeight = 100
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 300
         self.title = self.user.username
         self.tableView.register(DependentCell.self, forCellReuseIdentifier: "\(DependentCell.self)")

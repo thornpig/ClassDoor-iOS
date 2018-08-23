@@ -61,11 +61,11 @@ class ClassSessionViewController: UIViewController, UITextFieldDelegate, UIPicke
         
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        if let profileVC = self.previousViewController as? ProfileViewController {
-//            profileVC.user = self.user
-//        }
-//    }
+    override func viewWillDisappear(_ animated: Bool) {
+        if let classVC = self.previousViewController as? ClassViewController {
+            classVC.createdClass = self.parentClass
+        }
+    }
     
     func initializePickers() {
         self.startTimeDatePickerHeightConstraintConstant = self.startTImeDatePickerHeightConstraint.constant

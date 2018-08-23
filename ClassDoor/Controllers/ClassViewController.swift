@@ -64,23 +64,13 @@ class ClassViewController: UIViewController, UITableViewDelegate, UITableViewDat
         guard let sessions = self.createdClass?.sessions else {
             return
         }
-        var fetchedSessions: [ClassSession] = []
-        let semaphore = DispatchSemaphore(value: 0)
-        for session in sessions {
-            BackendDataService.shared.getWithIdentifier(session.id!, type: ClassSessionBackendResource.self) {
-                guard let foundSession = $0?.modelObj else {
-                    print("could not find session \(session.id!)")
-                    return
-                }
-                fetchedSessions.append(foundSession)
-                semaphore.signal()
-            }
-            semaphore.wait()
+        BackendDataService.shared.getWithIdentifiers(sessions.map{$0.id!}, type: ClassSessionBackendResource.self) {
+            self.createdClass?.sessions = $0
+            self.tableView.reloadData()
         }
-        self.createdClass?.sessions = fetchedSessions
-        self.tableView.reloadData()
     }
     
+
     @IBAction func onAddSessionButtonTapped(_ sender: UIButton) {
         let classSessionVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ClassSessionViewController") as! ClassSessionViewController
         classSessionVC.user = self.user
